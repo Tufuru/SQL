@@ -40,3 +40,16 @@ FROM person_visits
 WHERE (visit_date BETWEEN '2022-01-08' AND '2022-01-10') OR pizzeria_id = 2
 ORDER BY id DESC;
 ```
+## Задание 6
+![image](https://github.com/Tufuru/SQL/assets/144116593/3217765e-def6-482d-a553-d455409f364c)
+```sql
+SELECT name
+FROM person
+WHERE id = (SELECT person_id FROM person_order WHERE (order_date BETWEEN '2022-01-04' AND '2022-01-04'))
+```
+## Задание 7
+![image](https://github.com/Tufuru/SQL/assets/144116593/c4d9a9f2-c2df-4f01-9947-65d1d0e21dce)
+```sql
+SELECT CASE WHEN name = 'Kate' THEN 'True' ELSE 'False' END
+FROM person;
+```
